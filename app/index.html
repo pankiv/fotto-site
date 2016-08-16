@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Заголовок</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<!-- Bootstrap v3.3.4 Grid Styles -->
+	<style>html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:hover,a:focus{color:#23527c;text-decoration:underline}a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role="button"]{cursor:pointer}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.row{margin-left:-15px;margin-right:-15px}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-xs,.visible-sm,.visible-md,.visible-lg{display:none !important}.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}table.visible-xs{display:table}tr.visible-xs{display:table-row !important}th.visible-xs,td.visible-xs{display:table-cell !important}}@media (max-width:767px){.visible-xs-block{display:block !important}}@media (max-width:767px){.visible-xs-inline{display:inline !important}}@media (max-width:767px){.visible-xs-inline-block{display:inline-block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block !important}table.visible-sm{display:table}tr.visible-sm{display:table-row !important}th.visible-sm,td.visible-sm{display:table-cell !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-block{display:block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline{display:inline !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline-block{display:inline-block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block !important}table.visible-md{display:table}tr.visible-md{display:table-row !important}th.visible-md,td.visible-md{display:table-cell !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-block{display:block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline{display:inline !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline-block{display:inline-block !important}}@media (min-width:1200px){.visible-lg{display:block !important}table.visible-lg{display:table}tr.visible-lg{display:table-row !important}th.visible-lg,td.visible-lg{display:table-cell !important}}@media (min-width:1200px){.visible-lg-block{display:block !important}}@media (min-width:1200px){.visible-lg-inline{display:inline !important}}@media (min-width:1200px){.visible-lg-inline-block{display:inline-block !important}}@media (max-width:767px){.hidden-xs{display:none !important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none !important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none !important}}@media (min-width:1200px){.hidden-lg{display:none !important}}.visible-print{display:none !important}@media print{.visible-print{display:block !important}table.visible-print{display:table}tr.visible-print{display:table-row !important}th.visible-print,td.visible-print{display:table-cell !important}}.visible-print-block{display:none !important}@media print{.visible-print-block{display:block !important}}.visible-print-inline{display:none !important}@media print{.visible-print-inline{display:inline !important}}.visible-print-inline-block{display:none !important}@media print{.visible-print-inline-block{display:inline-block !important}}@media print{.hidden-print{display:none !important}}</style>
+
+	<!-- Header CSS (First Sections of Website: paste after release from header.min.css here) -->
+	<style>.menu,.social ul{list-style-type:none}body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-family:OpenSansRegular,sans-serif;overflow-x:hidden}.fotto_descr,.large_fotto .la_wrap .center,.mycard_item h5,.text h3,.top_tel{font-family:OpenSansBold,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif}.preloader{display:block;position:fixed;top:0;left:0;width:100%;height:100%;background-color:#FFF;z-index:5}.sk-cube-grid{width:44px;height:44px;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.jssort01 .p,.mmm ul ul{left:0;position:absolute}.sk-cube-grid .sk-cube{width:33%;height:33%;background-color:#2FAFCF;float:left;-webkit-animation:sk-cubeGridScaleDelay 1.5s infinite ease-in-out;animation:sk-cubeGridScaleDelay 1.5s infinite ease-in-out}.sk-cube-grid .sk-cube1{-webkit-animation-delay:.2s;animation-delay:.2s}.sk-cube-grid .sk-cube2{-webkit-animation-delay:.3s;animation-delay:.3s}.sk-cube-grid .sk-cube3{-webkit-animation-delay:.4s;animation-delay:.4s}.sk-cube-grid .sk-cube4{-webkit-animation-delay:.1s;animation-delay:.1s}.sk-cube-grid .sk-cube5{-webkit-animation-delay:.2s;animation-delay:.2s}.sk-cube-grid .sk-cube6{-webkit-animation-delay:.3s;animation-delay:.3s}.sk-cube-grid .sk-cube7{-webkit-animation-delay:0s;animation-delay:0s}.sk-cube-grid .sk-cube8{-webkit-animation-delay:.1s;animation-delay:.1s}.sk-cube-grid .sk-cube9{-webkit-animation-delay:.2s;animation-delay:.2s}@-webkit-keyframes sk-cubeGridScaleDelay{0%,100%,70%{-webkit-transform:scale3D(1,1,1);transform:scale3D(1,1,1)}35%{-webkit-transform:scale3D(0,0,1);transform:scale3D(0,0,1)}}@keyframes sk-cubeGridScaleDelay{0%,100%,70%{-webkit-transform:scale3D(1,1,1);transform:scale3D(1,1,1)}35%{-webkit-transform:scale3D(0,0,1);transform:scale3D(0,0,1)}}.hidden{display:none}.location li,.social ul li{display:inline-block}a:focus,a:hover{text-decoration:none;color:#000}.top_row{margin-bottom:0;border-bottom:1px solid #e5e5e5}.social ul{padding-left:0}.social ul li svg path{-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out}.facebook:hover path{fill:#0D4BE8}.vk:hover path{fill:#0F5BF7}.youtube:hover path{fill:#F80E0E}.github:hover path{fill:#232222}.location li{margin-left:30px}.location li:first-child{margin-left:0}.top_tel{margin:16px 0;font-size:1.5em;float:right}.main-menu,.we{margin:0 auto;text-align:center}.fotto_descr h5,nav ul a{font-size:16px}nav .brand-logo{position:relative;z-index:1000}.button-collapse{padding-top:7px}.main-menu li a,.mmm ul li a{padding:20px;background-color:pink}.block ul li,.side-nav li{display:block}.we{display:inline-block}.main-menu{display:block}.main-menu ul{display:none;position:absolute;top:100%}.main-menu li,.mmm ul li{position:relative;float:left}.main-menu li a{display:block;color:#000}.main-menu li:hover ul{display:block}.mmm{text-align:center}.mmm ul{display:inline-block}.mmm ul li a,.mmm ul li:hover ul{display:block}.mmm ul ul{display:none;right:0}.mmm ul ul li{display:block;float:none;border-bottom:1px solid #eee;border-left:2px solid transparent}.mmm ul ul li:hover{border-left:2px solid #F80D0D}.jssora05l,.jssora05r{display:block;position:absolute;width:40px;height:40px;cursor:pointer;background:url(img/a17.png) no-repeat;overflow:hidden}.download,.menu li a,.mycard_item .send{display:inline-block}.jssora05l{background-position:-10px -40px}.jssora05r{background-position:-70px -40px}.jssora05l:hover{background-position:-130px -40px}.jssora05r:hover{background-position:-190px -40px}.jssora05l.jssora05ldn{background-position:-250px -40px}.jssora05r.jssora05rdn{background-position:-310px -40px}.jssort01 .p{top:0;width:72px;height:72px}.jssort01 .t,.jssort01 .w{width:100%;height:100%;position:absolute;top:0;left:0}.jssort01 .t{border:none}.jssort01 .c{position:absolute;top:0;left:0;width:68px;height:68px;border:2px solid #000;-webkit-box-sizing:content-box;box-sizing:content-box;background:url(img/t01.png) -1170px -1170px no-repeat}.jssort01 .pav .c{top:2px;left:2px;width:68px;height:68px;border:0 solid #000;background-position:50% 50%}.jssort01 .p:hover .c{top:0;left:0;width:70px;height:70px;border:1px solid #fff;background-position:50% 50%}.jssort01 .p.pdn .c{background-position:50% 50%;width:68px;height:68px;border:2px solid #000}* html .jssort01 .c,* html .jssort01 .pav .c,* html .jssort01 .pdn .c{width:72px;height:72px}.carousel-slider .carousel-item{background-repeat:no-repeat;background-size:cover}.text{padding:40px 0}.text p{color:#333}.foto_wrapper{overflow:hidden;position:relative;margin-bottom:30px;max-height:350px}.foto_wrapper:hover img{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}.foto_wrapper:hover .fotto_overlay{opacity:.7}.foto_wrapper:hover .fotto_descr{left:20px}.foto_wrapper img{max-width:100%;height:auto;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out}.fotto_overlay{position:absolute;left:0;top:0;width:100%;height:100%;background:-webkit-linear-gradient(315deg,#ff1493 0,#6433d7 100%);background:linear-gradient(135deg,#ff1493 0,#6433d7 100%);-webkit-transition:all .5s ease-in-out;transition:all .5s ease-in-out;opacity:0}.fotto_descr{position:absolute;bottom:35px;left:-200%;color:#fff;-webkit-transition:all .5s ease-in-out;transition:all .5s ease-in-out}.more{text-align:center}.download{padding:20px 30px;background:-webkit-linear-gradient(315deg,#ff1493 0,#6433d7 100%);background:linear-gradient(135deg,#ff1493 0,#6433d7 100%);color:#fff;-webkit-border-radius:40px;border-radius:40px;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out}.download:focus,.download:hover{color:#fff;text-replace:none;background:-webkit-linear-gradient(315deg,#6433d7 0,#ff1493 100%);background:linear-gradient(135deg,#6433d7 0,#ff1493 100%)}.nopadding{padding:0}.large_fotto{margin:50px 0}.large_fotto .la_wrap{position:relative;overflow:hidden}.large_fotto .la_wrap:hover::before{opacity:1}.large_fotto .la_wrap:hover .social{bottom:20px}.large_fotto .la_wrap img{max-width:100%}.large_fotto .la_wrap::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.7);opacity:.6;-webkit-transition:all .4s;transition:all .4s}.large_fotto .la_wrap .center{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);z-index:10;color:#fff;text-align:center}.large_fotto .la_wrap .center h4{font-size:30px;margin:0}.large_fotto .la_wrap .social{position:absolute;bottom:-100%;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);-webkit-transition:all .6s;transition:all .6s}.img-wrap{overflow:hidden;height:250px}.mycard_item{margin-bottom:50px}.mycard_item:hover{-webkit-box-shadow:rgba(0,0,0,.3) 0 21px 27px;box-shadow:rgba(0,0,0,.3) 0 21px 27px}.mycard_item:hover img{-webkit-transform:scale(1.27,1.27);-ms-transform:scale(1.27,1.27);transform:scale(1.27,1.27)}.mycard_item img{width:100%;height:100%;-webkit-transition:-webkit-transform .7s;transition:-webkit-transform .7s;transition:transform .7s;transition:transform .7s,-webkit-transform .7s}.mycard_item .descr{padding:0 20px}.mycard_item .date{font-style:italic;color:#888;padding:20px 0}.mycard_item h5{font-size:20px;margin:0}.mycard_item p{text-align:justify}.mycard_item svg{vertical-align:middle;padding-bottom:3px}.mycard_item .send{margin-bottom:20px}.mycard_item .send svg path{fill:#6433d7}.text-right{text-align:right}.text-color{color:#000}.text-color:focus,.text-color:hover{color:#6433d7}.nav-wrapper{padding:30px 0}.menu{margin:0;padding:0;overflow:hidden;background-color:#232429}.menu li a:hover,.menu li.active{background-color:#EB9D05}.menu li{float:left}.menu li a{color:#fff;text-align:center;padding:14px 18px;text-decoration:none;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;font-size:17px}.menu li.icon{display:none}.menu li.icon a{padding:0}.menu li.icon a:focus,.menu li.icon a:hover{background-color:transparent}.toggle-mnu{display:block;width:28px;height:28px;margin-top:18px;margin-right:20px}.toggle-mnu span:after,.toggle-mnu span:before{content:"";position:absolute;left:0;top:9px}.toggle-mnu span:after{top:18px}.toggle-mnu span{position:relative;display:block}.toggle-mnu span,.toggle-mnu span:after,.toggle-mnu span:before{width:100%;height:4px;background-color:#EB9D05;-webkit-transition:all .3s;transition:all .3s;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-border-radius:2px;border-radius:2px}.toggle-mnu.on span{background-color:transparent!important}.toggle-mnu.on span:before{-webkit-transform:rotate(45deg) translate(-1px,0);-ms-transform:rotate(45deg) translate(-1px,0);transform:rotate(45deg) translate(-1px,0)}.toggle-mnu.on span:after{-webkit-transform:rotate(-45deg) translate(6px,-7px);-ms-transform:rotate(-45deg) translate(6px,-7px);transform:rotate(-45deg) translate(6px,-7px)}</style>
+
+	<!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
+	<script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
+
+	<!-- Load CSS Start -->
+	<script>loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" );</script>
+	<script>loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );</script>
+	<!-- Load CSS End -->
+
+	<!-- Load CSS Compiled without JS -->
+	<noscript>
+		<link rel="stylesheet" href="css/fonts.min.css">
+		<link rel="stylesheet" href="css/main.min.css">
+	</noscript>
+
+</head>
+
+<body>
+
+	<div class="preloader">
+		<div class="sk-cube-grid">
+			<div class="sk-cube sk-cube1"></div>
+			<div class="sk-cube sk-cube2"></div>
+			<div class="sk-cube sk-cube3"></div>
+			<div class="sk-cube sk-cube4"></div>
+			<div class="sk-cube sk-cube5"></div>
+			<div class="sk-cube sk-cube6"></div>
+			<div class="sk-cube sk-cube7"></div>
+			<div class="sk-cube sk-cube8"></div>
+			<div class="sk-cube sk-cube9"></div>
+		</div>
+	</div>
+
+		<div class="container">
+			<div class="row top_row">
+				<div class="col-md-2">
+					<div class="social">
+						<ul>
+							<li class="facebook">
+								<a href="#">
+									<svg style="width:28px;height:28px" viewBox="0 0 24 24">
+										<path fill="#EB9D05" d="M19,4V7H17A1,1 0 0,0 16,8V10H19V13H16V20H13V13H11V10H13V7.5C13,5.56 14.57,4 16.5,4M20,2H4A2,2 0 0,0 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z" />
+									</svg>
+								</a>
+							</li>
+
+							<li class="vk">
+								<a href="#">
+									<svg style="width:28px;height:28px" viewBox="0 0 24 24">
+										<path fill="#EB9D05" d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M17.24,14.03C16.06,12.94 16.22,13.11 17.64,11.22C18.5,10.07 18.85,9.37 18.74,9.07C18.63,8.79 18,8.86 18,8.86L15.89,8.88C15.89,8.88 15.73,8.85 15.62,8.92C15.5,9 15.43,9.15 15.43,9.15C15.43,9.15 15.09,10.04 14.65,10.8C13.71,12.39 13.33,12.47 13.18,12.38C12.83,12.15 12.91,11.45 12.91,10.95C12.91,9.41 13.15,8.76 12.46,8.6C12.23,8.54 12.06,8.5 11.47,8.5C10.72,8.5 10.08,8.5 9.72,8.68C9.5,8.8 9.29,9.06 9.41,9.07C9.55,9.09 9.86,9.16 10.03,9.39C10.25,9.68 10.24,10.34 10.24,10.34C10.24,10.34 10.36,12.16 9.95,12.39C9.66,12.54 9.27,12.22 8.44,10.78C8,10.04 7.68,9.22 7.68,9.22L7.5,9L7.19,8.85H5.18C5.18,8.85 4.88,8.85 4.77,9C4.67,9.1 4.76,9.32 4.76,9.32C4.76,9.32 6.33,12.96 8.11,14.8C9.74,16.5 11.59,16.31 11.59,16.31H12.43C12.43,16.31 12.68,16.36 12.81,16.23C12.93,16.1 12.93,15.94 12.93,15.94C12.93,15.94 12.91,14.81 13.43,14.65C13.95,14.5 14.61,15.73 15.31,16.22C15.84,16.58 16.24,16.5 16.24,16.5L18.12,16.47C18.12,16.47 19.1,16.41 18.63,15.64C18.6,15.58 18.36,15.07 17.24,14.03Z" />
+									</svg>
+								</a>
+							</li>
+
+							<li class="youtube">
+								<a href="#">
+									<svg style="width:28px;height:28px" viewBox="0 0 24 24">
+										<path fill="#EB9D05" d="M10,16.5V7.5L16,12M20,4.4C19.4,4.2 15.7,4 12,4C8.3,4 4.6,4.19 4,4.38C2.44,4.9 2,8.4 2,12C2,15.59 2.44,19.1 4,19.61C4.6,19.81 8.3,20 12,20C15.7,20 19.4,19.81 20,19.61C21.56,19.1 22,15.59 22,12C22,8.4 21.56,4.91 20,4.4Z" />
+									</svg>
+								</a>
+							</li>
+
+							<li class="github">
+								<a href="#">
+									<svg style="width:28px;height:28px" viewBox="0 0 24 24">
+										<path fill="#EB9D05" d="M4,2H20A2,2 0 0,1 22,4V20A2,2 0 0,1 20,22H14.85C14.5,21.92 14.5,21.24 14.5,21V18.26C14.5,17.33 14.17,16.72 13.81,16.41C16.04,16.16 18.38,15.32 18.38,11.5C18.38,10.39 18,9.5 17.35,8.79C17.45,8.54 17.8,7.5 17.25,6.15C17.25,6.15 16.41,5.88 14.5,7.17C13.71,6.95 12.85,6.84 12,6.84C11.15,6.84 10.29,6.95 9.5,7.17C7.59,5.88 6.75,6.15 6.75,6.15C6.2,7.5 6.55,8.54 6.65,8.79C6,9.5 5.62,10.39 5.62,11.5C5.62,15.31 7.95,16.17 10.17,16.42C9.89,16.67 9.63,17.11 9.54,17.76C8.97,18 7.5,18.45 6.63,16.93C6.63,16.93 6.1,15.97 5.1,15.9C5.1,15.9 4.12,15.88 5,16.5C5,16.5 5.68,16.81 6.14,17.97C6.14,17.97 6.73,19.91 9.5,19.31V21C9.5,21.24 9.5,21.92 9.14,22H4A2,2 0 0,1 2,20V4A2,2 0 0,1 4,2Z" />
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-7 location">
+					<ul>
+						<li>
+							<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+								<path fill="#EB9D05" d="M18,16H6V15.1C6,13.1 10,12 12,12C14,12 18,13.1 18,15.1M12,5.3C13.5,5.3 14.7,6.5 14.7,8C14.7,9.5 13.5,10.7 12,10.7C10.5,10.7 9.3,9.5 9.3,8C9.3,6.5 10.5,5.3 12,5.3M19,2H5C3.89,2 3,2.89 3,4V18A2,2 0 0,0 5,20H9L12,23L15,20H19A2,2 0 0,0 21,18V4C21,2.89 20.1,2 19,2Z" />
+							</svg>
+							м.Тернопіль вул. Текстильна, 10
+						</li>
+						<li>
+							<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+								<path fill="#EB9D05" d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" />
+							</svg>
+							м.Тернопіль вул. Текстильна, 10
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<div class="top_tel">
+						<svg style="width:27px;height:27px" viewBox="0 0 24 24">
+							<path fill="#EB9D05" d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
+						</svg>
+						<span>0683362309</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav>
+			<div class="container nopading">
+				<div class="nav-wrapper">
+					<ul id="nav-mobile" class="menu">
+						<li class="active"><a href="#">Про нас</a></li>
+						<li><a href="#">Послуги</a></li>
+						<li><a href="#">Поради</a></li>
+						<li><a href="#">Вакансії</a></li>
+						<li><a href="#">Корисні поради</a></li>
+						<li><a href="#">Послуги</a></li>
+						<li class="icon"><a href="#" class="toggle-mnu"><span></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<svg viewBox="0 0 960 368" style="background-color:#ffffff" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%">
+  <defs>
+    <mask id="masking" maskUnits="objectBoundingBox">
+      <path d="M-62.12 96.97C21.545-2.364 301.666-114.667 140 7.333c-161.667 122-309.697 403.273-116.667 208C131.47 105.94 355.333-149.333 245 20S-155.304 487.18 38 332.667C234 176 458.667-194 356 25 253.333 244-173.553 600.852 100.667 388.667 360 188 468.667-109.333 448 14 427.333 137.333-1.333 597.333 234 380 469.333 162.667 576-136 526 18S182 558.667 336 386C490 213.333 646.667-160.667 599 11c-47.667 171.667-271.333 494-179 387C512.333 291 717.333-142 663 9c-54.333 151-263 561-151 379S754-128.667 723 12c-31 140.667-226.333 482-132 371S812.667-160.667 783 12c-29.667 172.667-193 479.333-123 366C730 264.667 870.667-142 831 8S674 501.667 722.667 420.667c48.666-81 208.666-666 185.333-408.667S704.394 593.788 806.06 428.788C907.728 263.788 989.334-176.667 947 66c-42.333 242.667-84.698 474.253-48.333 382.667 40.91-103.03 122.545-291.09 122.545-291.09" stroke="#fff" stroke-width="80" fill="none"/>
+    </mask>
+  </defs>
+
+  <g mask="url(#masking)" fill="#ffffff">
+    <image width="100%" height="100%" xlink:href="https://unsplash.it/960/368/?gravity=south"/>
+  </g>
+</svg>
+
+	<section class="text">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h3>Creative Photo Studio</h3>
+				</div>
+				<div class="col-md-6">
+					<p>We help ambitious brands get noticed, operating in the space between digital, design, branding and advertsing. We help solve communication problems with a fusion of exceptional media solutions, cutting through the noise, helping your brand stand out, engage and grow.</p>
+					<p>We help ambitious brands get noticed, operating in the space between digital, design, branding and advertsing. We help solve communication problems with a fusion of exceptional media solutions, cutting through the noise, helping your brand stand out, engage and grow.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+			<section class="myslider">
+			<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1170px; height: 556px; overflow: hidden; visibility: hidden; background-color: #24262e;">
+				<!-- Loading Screen -->
+				<div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+					<div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+					<div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+				</div>
+				<div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1170px; height: 456px; overflow: hidden;">
+					<div data-p="144.50" style="display: none;">
+						<img data-u="image" src="img/01.jpg" />
+						<img data-u="thumb" src="img/thumb-01.jpg" />
+					</div>
+					<div data-p="144.50" style="display: none;">
+						<img data-u="image" src="img/02.jpg" />
+						<img data-u="thumb" src="img/thumb-02.jpg" />
+					</div>
+					<div data-p="144.50" style="display: none;">
+						<img data-u="image" src="img/03.jpg" />
+						<img data-u="thumb" src="img/thumb-03.jpg" />
+					</div>
+					<div data-p="144.50" style="display: none;">
+						<img data-u="image" src="img/04.jpg" />
+						<img data-u="thumb" src="img/thumb-04.jpg" />
+					</div>
+					<div data-p="144.50" style="display: none;">
+						<img data-u="image" src="img/05.jpg" />
+						<img data-u="thumb" src="img/thumb-05.jpg" />
+					</div>
+					<div data-p="144.50" style="display: none;">
+						<img data-u="image" src="img/06.jpg" />
+						<img data-u="thumb" src="img/thumb-06.jpg" />
+					</div>
+					<div data-p="144.50" style="display: none;">
+						<img data-u="image" src="img/07.jpg" />
+						<img data-u="thumb" src="img/thumb-07.jpg" />
+					</div>
+					<div data-p="144.50" style="display: none;">
+						<img data-u="image" src="img/08.jpg" />
+						<img data-u="thumb" src="img/thumb-08.jpg" />
+					</div>
+					<div data-p="144.50" style="display: none;">
+						<img data-u="image" src="img/09.jpg" />
+						<img data-u="thumb" src="img/thumb-09.jpg" />
+					</div>
+					<div data-p="144.50" style="display: none;">
+						<img data-u="image" src="img/10.jpg" />
+						<img data-u="thumb" src="img/thumb-10.jpg" />
+					</div>
+					<div data-p="144.50" style="display: none;">
+						<img data-u="image" src="img/11.jpg" />
+						<img data-u="thumb" src="img/thumb-11.jpg" />
+					</div>
+					<div data-p="144.50" style="display: none;">
+						<img data-u="image" src="img/12.jpg" />
+						<img data-u="thumb" src="img/thumb-12.jpg" />
+					</div>
+					<a data-u="add" href="http://www.jssor.com" style="display:none">Jssor Slider</a>
+
+				</div>
+				<!-- Thumbnail Navigator -->
+				<div data-u="thumbnavigator" class="jssort01" style="position:absolute;left:0px;bottom:0px;width:800px;height:100px;" data-autocenter="1">
+					<!-- Thumbnail Item Skin Begin -->
+					<div data-u="slides" style="cursor: default;">
+						<div data-u="prototype" class="p">
+							<div class="w">
+								<div data-u="thumbnailtemplate" class="t"></div>
+							</div>
+							<div class="c"></div>
+						</div>
+					</div>
+					<!-- Thumbnail Item Skin End -->
+				</div>
+				<!-- Arrow Navigator -->
+				<span data-u="arrowleft" class="jssora05l" style="top:158px;left:8px;width:40px;height:40px;"></span>
+				<span data-u="arrowright" class="jssora05r" style="top:158px;right:8px;width:40px;height:40px;"></span>
+			</div>
+
+			<!-- #endregion Jssor Slider End -->
+		</section>
+
+	<section class="fotto">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					
+					<div class="foto_wrapper">
+						<div class="fotto_item">
+							<a href="img/fotto/1.jpg"><img src="img/fotto/1.jpg" alt="fotto"></a>
+						</div>
+						<div class="fotto_overlay">
+						</div>
+						<div class="fotto_descr">
+							<h5>Далеко-далеко за словесными горами в стране.</h5>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-sm-6">
+					
+					<div class="foto_wrapper">
+						<div class="fotto_item">
+							<img src="img/fotto/3.jpg" alt="fotto">
+						</div>
+						<div class="fotto_overlay">
+						</div>
+						<div class="fotto_descr">
+							<h5>Далеко-далеко за словесными горами в стране.</h5>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-sm-6">
+					
+					<div class="foto_wrapper">
+						<div class="fotto_item">
+							<img src="img/fotto/2.jpg" alt="fotto">
+						</div>
+						<div class="fotto_overlay">
+						</div>
+						<div class="fotto_descr">
+							<h5>Далеко-далеко за словесными горами в стране.</h5>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-sm-6">
+					
+					<div class="foto_wrapper">
+						<div class="fotto_item">
+							<img src="img/fotto/4.jpg" alt="fotto">
+						</div>
+						<div class="fotto_overlay">
+						</div>
+						<div class="fotto_descr">
+							<h5>Далеко-далеко за словесными горами в стране.</h5>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-sm-6">
+					
+					<div class="foto_wrapper">
+						<div class="fotto_item">
+							<img src="img/fotto/5.jpg" alt="fotto">
+						</div>
+						<div class="fotto_overlay">
+						</div>
+						<div class="fotto_descr">
+							<h5>Далеко-далеко за словесными горами в стране.</h5>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-sm-6">
+					
+					<div class="foto_wrapper">
+						<div class="fotto_item">
+							<img src="img/fotto/6.jpg" alt="fotto">
+						</div>
+						<div class="fotto_overlay">
+						</div>
+						<div class="fotto_descr">
+							<h5>Далеко-далеко за словесными горами в стране.</h5>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="more">
+			<a href="#" class="download">Завантажити ще</a>
+		</div>
+	</section>
+
+	<section class="large_fotto">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 nopadding">
+					<div class="la_wrap">
+						<img src="img/fotto/1_1.jpg" alt="la">
+						<div class="center">
+							<h4>Samuel Silva</h4>
+							<p>Founder &copy; Lifestyle Photographe</p>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook">
+									<a href="#">
+										<svg style="width:28px;height:28px" viewBox="0 0 24 24">
+											<path fill="#EB9D05" d="M19,4V7H17A1,1 0 0,0 16,8V10H19V13H16V20H13V13H11V10H13V7.5C13,5.56 14.57,4 16.5,4M20,2H4A2,2 0 0,0 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z" />
+										</svg>
+									</a>
+								</li>
+
+								<li class="vk">
+									<a href="#">
+										<svg style="width:28px;height:28px" viewBox="0 0 24 24">
+											<path fill="#EB9D05" d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M17.24,14.03C16.06,12.94 16.22,13.11 17.64,11.22C18.5,10.07 18.85,9.37 18.74,9.07C18.63,8.79 18,8.86 18,8.86L15.89,8.88C15.89,8.88 15.73,8.85 15.62,8.92C15.5,9 15.43,9.15 15.43,9.15C15.43,9.15 15.09,10.04 14.65,10.8C13.71,12.39 13.33,12.47 13.18,12.38C12.83,12.15 12.91,11.45 12.91,10.95C12.91,9.41 13.15,8.76 12.46,8.6C12.23,8.54 12.06,8.5 11.47,8.5C10.72,8.5 10.08,8.5 9.72,8.68C9.5,8.8 9.29,9.06 9.41,9.07C9.55,9.09 9.86,9.16 10.03,9.39C10.25,9.68 10.24,10.34 10.24,10.34C10.24,10.34 10.36,12.16 9.95,12.39C9.66,12.54 9.27,12.22 8.44,10.78C8,10.04 7.68,9.22 7.68,9.22L7.5,9L7.19,8.85H5.18C5.18,8.85 4.88,8.85 4.77,9C4.67,9.1 4.76,9.32 4.76,9.32C4.76,9.32 6.33,12.96 8.11,14.8C9.74,16.5 11.59,16.31 11.59,16.31H12.43C12.43,16.31 12.68,16.36 12.81,16.23C12.93,16.1 12.93,15.94 12.93,15.94C12.93,15.94 12.91,14.81 13.43,14.65C13.95,14.5 14.61,15.73 15.31,16.22C15.84,16.58 16.24,16.5 16.24,16.5L18.12,16.47C18.12,16.47 19.1,16.41 18.63,15.64C18.6,15.58 18.36,15.07 17.24,14.03Z" />
+										</svg>
+									</a>
+								</li>
+
+								<li class="youtube">
+									<a href="#">
+										<svg style="width:28px;height:28px" viewBox="0 0 24 24">
+											<path fill="#EB9D05" d="M10,16.5V7.5L16,12M20,4.4C19.4,4.2 15.7,4 12,4C8.3,4 4.6,4.19 4,4.38C2.44,4.9 2,8.4 2,12C2,15.59 2.44,19.1 4,19.61C4.6,19.81 8.3,20 12,20C15.7,20 19.4,19.81 20,19.61C21.56,19.1 22,15.59 22,12C22,8.4 21.56,4.91 20,4.4Z" />
+										</svg>
+									</a>
+								</li>
+
+								<li class="github">
+									<a href="#">
+										<svg style="width:28px;height:28px" viewBox="0 0 24 24">
+											<path fill="#EB9D05" d="M4,2H20A2,2 0 0,1 22,4V20A2,2 0 0,1 20,22H14.85C14.5,21.92 14.5,21.24 14.5,21V18.26C14.5,17.33 14.17,16.72 13.81,16.41C16.04,16.16 18.38,15.32 18.38,11.5C18.38,10.39 18,9.5 17.35,8.79C17.45,8.54 17.8,7.5 17.25,6.15C17.25,6.15 16.41,5.88 14.5,7.17C13.71,6.95 12.85,6.84 12,6.84C11.15,6.84 10.29,6.95 9.5,7.17C7.59,5.88 6.75,6.15 6.75,6.15C6.2,7.5 6.55,8.54 6.65,8.79C6,9.5 5.62,10.39 5.62,11.5C5.62,15.31 7.95,16.17 10.17,16.42C9.89,16.67 9.63,17.11 9.54,17.76C8.97,18 7.5,18.45 6.63,16.93C6.63,16.93 6.1,15.97 5.1,15.9C5.1,15.9 4.12,15.88 5,16.5C5,16.5 5.68,16.81 6.14,17.97C6.14,17.97 6.73,19.91 9.5,19.31V21C9.5,21.24 9.5,21.92 9.14,22H4A2,2 0 0,1 2,20V4A2,2 0 0,1 4,2Z" />
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 nopadding">
+					<div class="la_wrap">
+						<img src="img/fotto/1_2.jpg" alt="la">
+						<div class="center">
+							<h4>Samuel Silva</h4>
+							<p>Founder &copy; Lifestyle Photographe</p>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook">
+									<a href="#">
+										<svg style="width:28px;height:28px" viewBox="0 0 24 24">
+											<path fill="#EB9D05" d="M19,4V7H17A1,1 0 0,0 16,8V10H19V13H16V20H13V13H11V10H13V7.5C13,5.56 14.57,4 16.5,4M20,2H4A2,2 0 0,0 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z" />
+										</svg>
+									</a>
+								</li>
+
+								<li class="vk">
+									<a href="#">
+										<svg style="width:28px;height:28px" viewBox="0 0 24 24">
+											<path fill="#EB9D05" d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M17.24,14.03C16.06,12.94 16.22,13.11 17.64,11.22C18.5,10.07 18.85,9.37 18.74,9.07C18.63,8.79 18,8.86 18,8.86L15.89,8.88C15.89,8.88 15.73,8.85 15.62,8.92C15.5,9 15.43,9.15 15.43,9.15C15.43,9.15 15.09,10.04 14.65,10.8C13.71,12.39 13.33,12.47 13.18,12.38C12.83,12.15 12.91,11.45 12.91,10.95C12.91,9.41 13.15,8.76 12.46,8.6C12.23,8.54 12.06,8.5 11.47,8.5C10.72,8.5 10.08,8.5 9.72,8.68C9.5,8.8 9.29,9.06 9.41,9.07C9.55,9.09 9.86,9.16 10.03,9.39C10.25,9.68 10.24,10.34 10.24,10.34C10.24,10.34 10.36,12.16 9.95,12.39C9.66,12.54 9.27,12.22 8.44,10.78C8,10.04 7.68,9.22 7.68,9.22L7.5,9L7.19,8.85H5.18C5.18,8.85 4.88,8.85 4.77,9C4.67,9.1 4.76,9.32 4.76,9.32C4.76,9.32 6.33,12.96 8.11,14.8C9.74,16.5 11.59,16.31 11.59,16.31H12.43C12.43,16.31 12.68,16.36 12.81,16.23C12.93,16.1 12.93,15.94 12.93,15.94C12.93,15.94 12.91,14.81 13.43,14.65C13.95,14.5 14.61,15.73 15.31,16.22C15.84,16.58 16.24,16.5 16.24,16.5L18.12,16.47C18.12,16.47 19.1,16.41 18.63,15.64C18.6,15.58 18.36,15.07 17.24,14.03Z" />
+										</svg>
+									</a>
+								</li>
+
+								<li class="youtube">
+									<a href="#">
+										<svg style="width:28px;height:28px" viewBox="0 0 24 24">
+											<path fill="#EB9D05" d="M10,16.5V7.5L16,12M20,4.4C19.4,4.2 15.7,4 12,4C8.3,4 4.6,4.19 4,4.38C2.44,4.9 2,8.4 2,12C2,15.59 2.44,19.1 4,19.61C4.6,19.81 8.3,20 12,20C15.7,20 19.4,19.81 20,19.61C21.56,19.1 22,15.59 22,12C22,8.4 21.56,4.91 20,4.4Z" />
+										</svg>
+									</a>
+								</li>
+
+								<li class="github">
+									<a href="#">
+										<svg style="width:28px;height:28px" viewBox="0 0 24 24">
+											<path fill="#EB9D05" d="M4,2H20A2,2 0 0,1 22,4V20A2,2 0 0,1 20,22H14.85C14.5,21.92 14.5,21.24 14.5,21V18.26C14.5,17.33 14.17,16.72 13.81,16.41C16.04,16.16 18.38,15.32 18.38,11.5C18.38,10.39 18,9.5 17.35,8.79C17.45,8.54 17.8,7.5 17.25,6.15C17.25,6.15 16.41,5.88 14.5,7.17C13.71,6.95 12.85,6.84 12,6.84C11.15,6.84 10.29,6.95 9.5,7.17C7.59,5.88 6.75,6.15 6.75,6.15C6.2,7.5 6.55,8.54 6.65,8.79C6,9.5 5.62,10.39 5.62,11.5C5.62,15.31 7.95,16.17 10.17,16.42C9.89,16.67 9.63,17.11 9.54,17.76C8.97,18 7.5,18.45 6.63,16.93C6.63,16.93 6.1,15.97 5.1,15.9C5.1,15.9 4.12,15.88 5,16.5C5,16.5 5.68,16.81 6.14,17.97C6.14,17.97 6.73,19.91 9.5,19.31V21C9.5,21.24 9.5,21.92 9.14,22H4A2,2 0 0,1 2,20V4A2,2 0 0,1 4,2Z" />
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="mycard text">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h3>Recent from Our Blog</h3>
+				</div>
+				<div class="col-md-6 text-right">
+					<p>News, Articles &copy; Views from the Moriarty Photo Studio.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="mycard_item">
+						<div class="img-wrap">
+							<img src="img/01.jpg" alt="1">
+						</div>
+						<div class="descr">
+							<div class="date">
+								July 6, 2016
+							</div>
+							<a href="#" class="text-color"><h5>Bicycle Ride</h5></a>
+							<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Парадигматическая подзаголовок пояс переписали домах, обеспечивает моей то, снова ее свое не пунктуация, даже меня, города оксмокс наш страна он.</p>
+							<div class="send">
+								<a class="mycard_item_send text-color" href="#">Read more</a>
+								<svg style="width:18px;height:18px" viewBox="0 0 24 24">
+									<path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+								</svg>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="mycard_item">
+						<div class="img-wrap">
+							<img src="img/01.jpg" alt="1">
+						</div>
+						<div class="descr">
+							<div class="date">
+								July 6, 2016
+							</div>
+							<a href="#" class="text-color"><h5>Bicycle Ride</h5></a>
+							<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Парадигматическая подзаголовок пояс переписали домах, обеспечивает моей то, снова ее свое не пунктуация, даже меня, города оксмокс наш страна он.</p>
+							<div class="send">
+								<a class="mycard_item_send text-color" href="#">Read more</a>
+								<svg style="width:18px;height:18px" viewBox="0 0 24 24">
+									<path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+								</svg>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="mycard_item">
+						<div class="img-wrap">
+							<img src="img/01.jpg" alt="1">
+						</div>
+						<div class="descr">
+							<div class="date">
+								July 6, 2016
+							</div>
+							<a href="#" class="text-color"><h5>Bicycle Ride</h5></a>
+							<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Парадигматическая подзаголовок пояс переписали домах, обеспечивает моей то, снова ее свое не пунктуация, даже меня, города оксмокс наш страна он.</p>
+							<div class="send">
+								<a class="mycard_item_send text-color" href="#">Read more</a>
+								<svg style="width:18px;height:18px" viewBox="0 0 24 24">
+									<path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+								</svg>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+	</section>
+
+
+	<section class="myowl">
+		<div class="owl-carousel" id="lightgallery">
+			<div>
+				<a href="img/fotto/5.jpg" class="light">
+					<img src="img/fotto/5.jpg" alt="">
+					<span class="overlay">
+						<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+							<path fill="#EB9D05" d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A4,4 0 0,1 8,16A4,4 0 0,1 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4M12,6.5A1.5,1.5 0 0,1 13.5,8A1.5,1.5 0 0,1 12,9.5A1.5,1.5 0 0,1 10.5,8A1.5,1.5 0 0,1 12,6.5M12,14.5A1.5,1.5 0 0,0 10.5,16A1.5,1.5 0 0,0 12,17.5A1.5,1.5 0 0,0 13.5,16A1.5,1.5 0 0,0 12,14.5Z" />
+						</svg>
+					</span>
+				</a>
+			</div>
+			<div>
+				<a href="img/01.jpg" class="light" title="Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Большой коварных обеспечивает вопрос, домах продолжил, всемогущая даже гор до. Большой на берегу, от всех, страну если эта океана безорфографичный он всемогущая.">
+					<img src="img/01.jpg" alt="">
+					<span class="overlay">
+						<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+							<path fill="#EB9D05" d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A4,4 0 0,1 8,16A4,4 0 0,1 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4M12,6.5A1.5,1.5 0 0,1 13.5,8A1.5,1.5 0 0,1 12,9.5A1.5,1.5 0 0,1 10.5,8A1.5,1.5 0 0,1 12,6.5M12,14.5A1.5,1.5 0 0,0 10.5,16A1.5,1.5 0 0,0 12,17.5A1.5,1.5 0 0,0 13.5,16A1.5,1.5 0 0,0 12,14.5Z" />
+						</svg>
+					</span>
+				</a>
+			</div>
+			<div>
+				<a href="img/02.jpg" class="light">
+					<img src="img/02.jpg" alt="">
+					<span class="overlay">
+						<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+							<path fill="#EB9D05" d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A4,4 0 0,1 8,16A4,4 0 0,1 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4M12,6.5A1.5,1.5 0 0,1 13.5,8A1.5,1.5 0 0,1 12,9.5A1.5,1.5 0 0,1 10.5,8A1.5,1.5 0 0,1 12,6.5M12,14.5A1.5,1.5 0 0,0 10.5,16A1.5,1.5 0 0,0 12,17.5A1.5,1.5 0 0,0 13.5,16A1.5,1.5 0 0,0 12,14.5Z" />
+						</svg>
+					</span>
+				</a>
+			</div>
+			<div>
+				<a href="img/03.jpg" class="light">
+					<img src="img/03.jpg" alt="">
+					<span class="overlay">
+						<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+							<path fill="#EB9D05" d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A4,4 0 0,1 8,16A4,4 0 0,1 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4M12,6.5A1.5,1.5 0 0,1 13.5,8A1.5,1.5 0 0,1 12,9.5A1.5,1.5 0 0,1 10.5,8A1.5,1.5 0 0,1 12,6.5M12,14.5A1.5,1.5 0 0,0 10.5,16A1.5,1.5 0 0,0 12,17.5A1.5,1.5 0 0,0 13.5,16A1.5,1.5 0 0,0 12,14.5Z" />
+						</svg>
+					</span>
+				</a>
+			</div>
+			<div>
+				<a href="img/04.jpg" class="light">
+					<img src="img/04.jpg" alt="">
+					<span class="overlay">
+						<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+							<path fill="#EB9D05" d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A4,4 0 0,1 8,16A4,4 0 0,1 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4M12,6.5A1.5,1.5 0 0,1 13.5,8A1.5,1.5 0 0,1 12,9.5A1.5,1.5 0 0,1 10.5,8A1.5,1.5 0 0,1 12,6.5M12,14.5A1.5,1.5 0 0,0 10.5,16A1.5,1.5 0 0,0 12,17.5A1.5,1.5 0 0,0 13.5,16A1.5,1.5 0 0,0 12,14.5Z" />
+						</svg>
+					</span>
+				</a>
+			</div>
+			<div>
+				<a href="img/01.jpg" class="light">
+					<img src="img/01.jpg" alt="">
+					<span class="overlay">
+						<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+							<path fill="#EB9D05" d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A4,4 0 0,1 8,16A4,4 0 0,1 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4M12,6.5A1.5,1.5 0 0,1 13.5,8A1.5,1.5 0 0,1 12,9.5A1.5,1.5 0 0,1 10.5,8A1.5,1.5 0 0,1 12,6.5M12,14.5A1.5,1.5 0 0,0 10.5,16A1.5,1.5 0 0,0 12,17.5A1.5,1.5 0 0,0 13.5,16A1.5,1.5 0 0,0 12,14.5Z" />
+						</svg>
+					</span>
+				</a>
+			</div>
+			<div>
+				<a href="img/05.jpg" class="light">
+					<img src="img/05.jpg" alt="">
+					<span class="overlay">
+						<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+							<path fill="#EB9D05" d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A4,4 0 0,1 8,16A4,4 0 0,1 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4M12,6.5A1.5,1.5 0 0,1 13.5,8A1.5,1.5 0 0,1 12,9.5A1.5,1.5 0 0,1 10.5,8A1.5,1.5 0 0,1 12,6.5M12,14.5A1.5,1.5 0 0,0 10.5,16A1.5,1.5 0 0,0 12,17.5A1.5,1.5 0 0,0 13.5,16A1.5,1.5 0 0,0 12,14.5Z" />
+						</svg>
+					</span>
+				</a>
+			</div>
+			<div>
+				<a href="img/05.jpg" class="light">
+					<img src="img/05.jpg" alt="">
+					<span class="overlay">
+						<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+							<path fill="#EB9D05" d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A4,4 0 0,1 8,16A4,4 0 0,1 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4M12,6.5A1.5,1.5 0 0,1 13.5,8A1.5,1.5 0 0,1 12,9.5A1.5,1.5 0 0,1 10.5,8A1.5,1.5 0 0,1 12,6.5M12,14.5A1.5,1.5 0 0,0 10.5,16A1.5,1.5 0 0,0 12,17.5A1.5,1.5 0 0,0 13.5,16A1.5,1.5 0 0,0 12,14.5Z" />
+						</svg>
+					</span>
+				</a>
+			</div>
+			<div>
+				<a href="img/07.jpg" class="light">
+					<img src="img/07.jpg" alt="">
+					<span class="overlay">
+						<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+							<path fill="#EB9D05" d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A4,4 0 0,1 8,16A4,4 0 0,1 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4M12,6.5A1.5,1.5 0 0,1 13.5,8A1.5,1.5 0 0,1 12,9.5A1.5,1.5 0 0,1 10.5,8A1.5,1.5 0 0,1 12,6.5M12,14.5A1.5,1.5 0 0,0 10.5,16A1.5,1.5 0 0,0 12,17.5A1.5,1.5 0 0,0 13.5,16A1.5,1.5 0 0,0 12,14.5Z" />
+						</svg>
+					</span>
+				</a>
+			</div>
+			<div>
+				<a href="img/08.jpg" class="light">
+					<img src="img/08.jpg" alt="">
+					<span class="overlay">
+						<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+							<path fill="#EB9D05" d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A4,4 0 0,1 8,16A4,4 0 0,1 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4M12,6.5A1.5,1.5 0 0,1 13.5,8A1.5,1.5 0 0,1 12,9.5A1.5,1.5 0 0,1 10.5,8A1.5,1.5 0 0,1 12,6.5M12,14.5A1.5,1.5 0 0,0 10.5,16A1.5,1.5 0 0,0 12,17.5A1.5,1.5 0 0,0 13.5,16A1.5,1.5 0 0,0 12,14.5Z" />
+						</svg>
+					</span>
+				</a>
+			</div>
+			<div>
+				<a href="img/09.jpg" class="light">
+					<img src="img/09.jpg" alt="">
+					<span class="overlay">
+						<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+							<path fill="#EB9D05" d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A4,4 0 0,1 8,16A4,4 0 0,1 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4M12,6.5A1.5,1.5 0 0,1 13.5,8A1.5,1.5 0 0,1 12,9.5A1.5,1.5 0 0,1 10.5,8A1.5,1.5 0 0,1 12,6.5M12,14.5A1.5,1.5 0 0,0 10.5,16A1.5,1.5 0 0,0 12,17.5A1.5,1.5 0 0,0 13.5,16A1.5,1.5 0 0,0 12,14.5Z" />
+						</svg>
+					</span>
+				</a>
+			</div>
+			<div>
+				<a href="img/10.jpg" class="light">
+					<img src="img/10.jpg" alt="">
+					<span class="overlay">
+						<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+							<path fill="#EB9D05" d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A4,4 0 0,1 8,16A4,4 0 0,1 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4M12,6.5A1.5,1.5 0 0,1 13.5,8A1.5,1.5 0 0,1 12,9.5A1.5,1.5 0 0,1 10.5,8A1.5,1.5 0 0,1 12,6.5M12,14.5A1.5,1.5 0 0,0 10.5,16A1.5,1.5 0 0,0 12,17.5A1.5,1.5 0 0,0 13.5,16A1.5,1.5 0 0,0 12,14.5Z" />
+						</svg>
+					</span>
+				</a>
+			</div>
+			<div>
+				<a href="img/11.jpg" class="light">
+					<img src="img/11.jpg" alt="">
+					<span class="overlay">
+						<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+							<path fill="#EB9D05" d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A4,4 0 0,1 8,16A4,4 0 0,1 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4M12,6.5A1.5,1.5 0 0,1 13.5,8A1.5,1.5 0 0,1 12,9.5A1.5,1.5 0 0,1 10.5,8A1.5,1.5 0 0,1 12,6.5M12,14.5A1.5,1.5 0 0,0 10.5,16A1.5,1.5 0 0,0 12,17.5A1.5,1.5 0 0,0 13.5,16A1.5,1.5 0 0,0 12,14.5Z" />
+						</svg>
+					</span>
+				</a>
+			</div>
+			<div>
+				<a href="img/12.jpg" class="light">
+					<img src="img/12.jpg" alt="">
+					<span class="overlay">
+						<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+							<path fill="#EB9D05" d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A4,4 0 0,1 8,16A4,4 0 0,1 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4M12,6.5A1.5,1.5 0 0,1 13.5,8A1.5,1.5 0 0,1 12,9.5A1.5,1.5 0 0,1 10.5,8A1.5,1.5 0 0,1 12,6.5M12,14.5A1.5,1.5 0 0,0 10.5,16A1.5,1.5 0 0,0 12,17.5A1.5,1.5 0 0,0 13.5,16A1.5,1.5 0 0,0 12,14.5Z" />
+						</svg>
+					</span>
+				</a>
+			</div>
+			<div>
+				<a href="img/06.jpg" class="light">
+					<img src="img/06.jpg" alt="">
+					<span class="overlay">
+						<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+							<path fill="#EB9D05" d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A4,4 0 0,1 8,16A4,4 0 0,1 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4M12,6.5A1.5,1.5 0 0,1 13.5,8A1.5,1.5 0 0,1 12,9.5A1.5,1.5 0 0,1 10.5,8A1.5,1.5 0 0,1 12,6.5M12,14.5A1.5,1.5 0 0,0 10.5,16A1.5,1.5 0 0,0 12,17.5A1.5,1.5 0 0,0 13.5,16A1.5,1.5 0 0,0 12,14.5Z" />
+						</svg>
+					</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="button_wrap">
+			<button class="customPrevBtn downloade">prev</button>
+			<button class="customNextBtn downloade">next</button>
+		</div>
+	</section>
+
+
+	<footer class="main-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="callback">
+						<h5>Contack form</h5>
+						<div class="widjet_block noborder">
+							<div class="w_left">
+								Addres:
+							</div>
+							<div class="w_right">
+								121 King Street, Melbourne
+								Victoria 3000 Australia
+							</div>
+						</div>
+
+						<div class="widjet_block">
+							<div class="w_left">
+								Phone:
+							</div>
+							<div class="w_right">
+								(068)-33-62-309
+							</div>
+						</div>
+
+						<div class="widjet_block">
+							<div class="w_left">
+								Email:
+							</div>
+							<div class="w_right">
+								<a href="mailto:grawdanin@mail.ua">grawdanin@mail.ua</a>
+							</div>
+						</div>
+
+						<div class="widjet_block">
+							<div class="w_left">
+								Follow Us:
+							</div>
+							<div class="w_right">
+								<div class="social">
+									<ul>
+										<li class="facebook">
+											<a href="#">
+												<svg style="width:28px;height:28px" viewBox="0 0 24 24">
+													<path fill="#919499" d="M19,4V7H17A1,1 0 0,0 16,8V10H19V13H16V20H13V13H11V10H13V7.5C13,5.56 14.57,4 16.5,4M20,2H4A2,2 0 0,0 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z" />
+												</svg>
+											</a>
+										</li>
+
+										<li class="vk">
+											<a href="#">
+												<svg style="width:28px;height:28px" viewBox="0 0 24 24">
+													<path fill="#919499" d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M17.24,14.03C16.06,12.94 16.22,13.11 17.64,11.22C18.5,10.07 18.85,9.37 18.74,9.07C18.63,8.79 18,8.86 18,8.86L15.89,8.88C15.89,8.88 15.73,8.85 15.62,8.92C15.5,9 15.43,9.15 15.43,9.15C15.43,9.15 15.09,10.04 14.65,10.8C13.71,12.39 13.33,12.47 13.18,12.38C12.83,12.15 12.91,11.45 12.91,10.95C12.91,9.41 13.15,8.76 12.46,8.6C12.23,8.54 12.06,8.5 11.47,8.5C10.72,8.5 10.08,8.5 9.72,8.68C9.5,8.8 9.29,9.06 9.41,9.07C9.55,9.09 9.86,9.16 10.03,9.39C10.25,9.68 10.24,10.34 10.24,10.34C10.24,10.34 10.36,12.16 9.95,12.39C9.66,12.54 9.27,12.22 8.44,10.78C8,10.04 7.68,9.22 7.68,9.22L7.5,9L7.19,8.85H5.18C5.18,8.85 4.88,8.85 4.77,9C4.67,9.1 4.76,9.32 4.76,9.32C4.76,9.32 6.33,12.96 8.11,14.8C9.74,16.5 11.59,16.31 11.59,16.31H12.43C12.43,16.31 12.68,16.36 12.81,16.23C12.93,16.1 12.93,15.94 12.93,15.94C12.93,15.94 12.91,14.81 13.43,14.65C13.95,14.5 14.61,15.73 15.31,16.22C15.84,16.58 16.24,16.5 16.24,16.5L18.12,16.47C18.12,16.47 19.1,16.41 18.63,15.64C18.6,15.58 18.36,15.07 17.24,14.03Z" />
+												</svg>
+											</a>
+										</li>
+
+										<li class="youtube">
+											<a href="#">
+												<svg style="width:28px;height:28px" viewBox="0 0 24 24">
+													<path fill="#919499" d="M10,16.5V7.5L16,12M20,4.4C19.4,4.2 15.7,4 12,4C8.3,4 4.6,4.19 4,4.38C2.44,4.9 2,8.4 2,12C2,15.59 2.44,19.1 4,19.61C4.6,19.81 8.3,20 12,20C15.7,20 19.4,19.81 20,19.61C21.56,19.1 22,15.59 22,12C22,8.4 21.56,4.91 20,4.4Z" />
+												</svg>
+											</a>
+										</li>
+
+										<li class="github">
+											<a href="#">
+												<svg style="width:28px;height:28px" viewBox="0 0 24 24">
+													<path fill="#919499" d="M4,2H20A2,2 0 0,1 22,4V20A2,2 0 0,1 20,22H14.85C14.5,21.92 14.5,21.24 14.5,21V18.26C14.5,17.33 14.17,16.72 13.81,16.41C16.04,16.16 18.38,15.32 18.38,11.5C18.38,10.39 18,9.5 17.35,8.79C17.45,8.54 17.8,7.5 17.25,6.15C17.25,6.15 16.41,5.88 14.5,7.17C13.71,6.95 12.85,6.84 12,6.84C11.15,6.84 10.29,6.95 9.5,7.17C7.59,5.88 6.75,6.15 6.75,6.15C6.2,7.5 6.55,8.54 6.65,8.79C6,9.5 5.62,10.39 5.62,11.5C5.62,15.31 7.95,16.17 10.17,16.42C9.89,16.67 9.63,17.11 9.54,17.76C8.97,18 7.5,18.45 6.63,16.93C6.63,16.93 6.1,15.97 5.1,15.9C5.1,15.9 4.12,15.88 5,16.5C5,16.5 5.68,16.81 6.14,17.97C6.14,17.97 6.73,19.91 9.5,19.31V21C9.5,21.24 9.5,21.92 9.14,22H4A2,2 0 0,1 2,20V4A2,2 0 0,1 4,2Z" />
+												</svg>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="foot_gallery">
+						<h5>Gallery</h5>
+						<div class="g_wrap">
+							<div class="foot_img_wrap">
+								<img src="img/01.jpg" alt="">
+							</div>
+							<div class="foot_img_wrap">
+								<img src="img/02.jpg" alt="">
+							</div>
+							<div class="foot_img_wrap">
+								<img src="img/03.jpg" alt="">
+							</div>
+							<div class="foot_img_wrap">
+								<img src="img/04.jpg" alt="">
+							</div>
+							<div class="foot_img_wrap">
+								<img src="img/05.jpg" alt="">
+							</div>
+							<div class="foot_img_wrap">
+								<img src="img/06.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="post">
+						<h5>RECENT POSTS</h5>
+						<div class="widjet_block noborder">
+							<div class="w_left">
+								Stay Forever Young
+							</div>
+							<div class="w_right">
+								February 18, 2016 by Pankiv 0 Comments
+							</div>
+						</div>
+
+						<div class="widjet_block">
+							<div class="w_left">
+								Being in Your Control
+							</div>
+							<div class="w_right">
+								February 18, 2016 by Pankiv 0 Comments
+							</div>
+						</div>
+
+						<div class="widjet_block">
+							<div class="w_left">
+								Coffee Is Never Enough
+							</div>
+							<div class="w_right">
+								February 18, 2016 by Pankiv 0 Comments
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-3">
+					<div class="suscribe">
+						<h5>NEWSLETTER SIGNUP</h5>
+						<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+						<form>
+							<input type="text" required>
+							<button>Suscribe</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="hidden"></div>
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Load Scripts Start -->
+	<script>var scr = {"scripts":[
+		{"src" : "js/libs.js", "async" : false},
+		{"src" : "js/common.js", "async" : false}
+		]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+	</script>
+	<!-- Load Scripts End -->
+
+</body>
+</html>
+

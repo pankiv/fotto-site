@@ -1,0 +1,9 @@
+{
+  "name": "pankiv",
+  "dependencies": {
+    "owl.carousel": "OwlCarousel2#^2.1.6",
+    "lightgallery": "^1.2.21",
+    "jquery": "2.1.4",
+    "jquery-drawsvg": "^1.0.1"
+  }
+}
